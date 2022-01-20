@@ -1,0 +1,25 @@
+import React from "react";
+import { Channel } from "../services/EventService";
+
+function VideoList(props) {
+    const videos = props.videos || [];
+
+    function handleClick(video) {
+        Channel.emit('video:select', video);
+    }
+
+    return (
+        <ul className="video-list">
+            {
+                videos.map(video => (
+                    <li key={video.id} className="video" onClick={handleClick()}>
+                        <img alt={video.name} src={video.img} />
+                        <div>{video.name}</div>
+                    </li>
+                ))
+            }
+        </ul>
+    );
+}
+
+export default VideoList;
