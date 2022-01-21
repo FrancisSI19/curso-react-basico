@@ -12,7 +12,7 @@ function VideoList(props) {
         <ul className="video-list">
             {
                 videos.map(video => (
-                    <li key={video.id} className="video" onClick={handleClick()}>
+                    <li key={video.id} className="video" onClick={handleClick.bind(this, video)}>
                         <img alt={video.name} src={video.img} />
                         <div>{video.name}</div>
                     </li>

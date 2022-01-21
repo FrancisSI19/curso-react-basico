@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactDOM  from "react";
+import ReactDOM  from "react-dom";
 import { Channel } from "../services/EventService";
 
 class VideoPlayer extends Component{

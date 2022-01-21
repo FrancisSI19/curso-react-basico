@@ -66,12 +66,9 @@ class App extends (Component) {
           </VideoInline>
           <VideoList videos={state.videos} />
           <VideoCinema isActive={state.videoContainerElement === this.cinemaVideo}>
-            <div ref={this.cinemaVideo}>
-
-            </div>
+            <div ref={this.cinemaVideo}></div>
           </VideoCinema>
-
-      </div>
+        </div>
     );
   }
 }
